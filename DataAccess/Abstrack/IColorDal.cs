@@ -6,9 +6,8 @@ using System.Text;
 namespace DataAccess.Abstrack
 {
     //Car ile ilgili veritabanında yapacağım operasyonları içeren interface
-    public interface ICarDal:IEntityRepository<Car>
+    public interface IColorDal:IEntityRepository<Color>
     {
         //interface metotları default public'dir.
-
     }
 }

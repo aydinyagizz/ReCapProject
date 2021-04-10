@@ -19,5 +19,22 @@ namespace Business.Concrete
             //İş kodları
             return _carDal.GetAll();
         }
+
+        public List<Car> GetCarsByBrandId(int id)
+        {
+            //her p için p'nin BrandId'si benim gönderdiğim id'ye yani BrandId'ye eşitse onları filtrele.
+            return _carDal.GetAll(p => p.BrandId == id);
+        }
+
+        public List<Car> GetCarsByColorId(int id)
+        {
+            //her p için p'nin BrandId'si benim gönderdiğim id'ye yani BrandId'ye eşitse onları filtrele.
+            return _carDal.GetAll(p => p.ColorId == id);
+        }
+
+        public List<Car> GetCarsByDailyPrice(int min, int max)
+        {
+            return _carDal.GetAll(p => p.DailyPrice >= min && p.DailyPrice <= max); //şu fiyat aralığında listele.
+        }
     }
 }
