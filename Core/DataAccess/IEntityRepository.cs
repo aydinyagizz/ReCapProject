@@ -1,10 +1,10 @@
-﻿using Entities.Abstrack;
+﻿using Core.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Text;
 
-namespace DataAccess.Abstrack
+namespace Core.DataAccess
 {
     //generic constraint - generik kısıt anlamında. yani kısıtlamalar yapacağız. sadece veritabanımızda olan product, category gibi şeyler buraya gönderilebilir.
     //T; verdiğimiz tipe göre gönderir. product ise product, category ise category olur.

@@ -1,5 +1,6 @@
 ﻿using DataAccess.Abstrack;
 using Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -57,6 +58,11 @@ namespace DataAccess.Concrete.InMemory
         {
             //where; içindeki şarta uyan bütün elemanları yeni bir liste haline getirir ve onu döndürür.
             return _cars.Where(p => p.BrandId == brandId).ToList();
+        }
+
+        public List<CarDetailDto> GetCarDetails()
+        {
+            throw new NotImplementedException();
         }
 
         public void Update(Car car)

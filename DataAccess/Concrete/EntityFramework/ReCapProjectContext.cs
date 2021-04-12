@@ -18,5 +18,6 @@ namespace DataAccess.Concrete.EntityFramework
         public DbSet<Car> Cars { get; set; } //benim hangi nesnem veritabanından hangi nesneye karşılık gelecek onu belirtiyoruz.
         public DbSet<Brand> Brands { get; set; } //benim hangi nesnem veritabanından hangi nesneye karşılık gelecek onu belirtiyoruz.
         public DbSet<Color> Colors { get; set; } //benim hangi nesnem veritabanından hangi nesneye karşılık gelecek onu belirtiyoruz.
+        public DbSet<Order> Orders { get; set; } //benim hangi nesnem veritabanından hangi nesneye karşılık gelecek onu belirtiyoruz.
     }
 }
