@@ -1,4 +1,5 @@
 ﻿using Business.Abstrack;
+using Core.Utilities.Results;
 using DataAccess.Abstrack;
 using Entities.Concrete;
 using System;
@@ -16,16 +17,16 @@ namespace Business.Concrete
             _brandDal = brandDal;
         }
 
-        public List<Brand> GetAll()
+        public IDataResult<List<Brand>> GetAll()
         {
-            return _brandDal.GetAll();
+            return new SuccessDataResult<List<Brand>>(_brandDal.GetAll());
         }
 
         
-        public Brand GetById(int brandId)
+        public IDataResult<Brand> GetById(int brandId)
         {
             //select * from Brands where BrandId=3 demek gibi. 
-            return _brandDal.Get(b => b.BrandId == brandId);
+            return new SuccessDataResult<Brand>(_brandDal.Get(b => b.BrandId == brandId));
         }
     }
 }

@@ -36,13 +36,13 @@ namespace Business.Concrete
         {
             //İş kodları
 
-            if (DateTime.Now.Hour == 21)
+            if (DateTime.Now.Hour == 1)
             {
                 //MaintenanceTime; bakım zamanı demek
                 return new ErrorDataResult<List<Car>>(Messages.MaintenanceTime);
             }
 
-            return new SuccessDataResult<List<Car>>(_carDal.GetAll(), Messages.CarAdded);
+            return new SuccessDataResult<List<Car>>(_carDal.GetAll(), Messages.CarListed);
         }
 
         public IDataResult<Car> GetById(int carId)
