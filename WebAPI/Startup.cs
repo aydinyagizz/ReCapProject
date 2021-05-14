@@ -30,9 +30,9 @@ namespace WebAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddSingleton<ICarService, CarManager>(); //arka planda bir referans oluþturmamýza yarýyor. bizim yerimize new()'leme hareketini yapýyor.
+            //services.AddSingleton<ICarService, CarManager>(); //arka planda bir referans oluþturmamýza yarýyor. bizim yerimize new()'leme hareketini yapýyor.
             // eðer birisi senden ICarService isterse ona arka planda CarManager oluþtur onu ver demek üstteki kod.
-            services.AddSingleton<ICarDal, EfCarDal>();
+            //services.AddSingleton<ICarDal, EfCarDal>();
             // eðer birisi senden ICarDal isterse ona arka planda EfCarDal oluþtur onu ver demek üstteki kod.
         }
 
