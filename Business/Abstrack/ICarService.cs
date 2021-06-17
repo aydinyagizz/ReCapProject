@@ -18,5 +18,6 @@ namespace Business.Abstrack
         IDataResult<List<CarDetailDto>> GetCarDetails();
         IDataResult<Car> GetById(int carId); //sadece car döndürür. tek başına bir ürün döndürür.
         IResult Add(Car car); //yeni ürün ekleme.
+        IResult Update(Car car); //yeni ürün ekleme.
     }
 }
